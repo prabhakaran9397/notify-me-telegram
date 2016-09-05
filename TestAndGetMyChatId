@@ -1,5 +1,7 @@
 #!/bin/bash
 
+DELAY=0
+
 echo -n "Enter Your Bot Token: "
 read TOKEN
 
@@ -8,6 +10,13 @@ RESPONSE=$(curl -s https://api.telegram.org/bot$TOKEN/getMe)
 if [ "${RESPONSE:6:4}" = "true" ]; then
 	echo "Your token is working Properly"
 	echo $RESPONSE
+	echo "Now, send any message from your telegram account to your bot"
+	echo "Send within $DELAY seconds"
+	sleep $DELAY
+	curl -s https://api.telegram.org/bot$TOKEN/getUpdates > json
+	YOUR_ID=$(cat json | grep -o \"from\":{\"id\":\[0-9\]\* | rev | grep -o \[0-9\]\* | rev | head -1)
+	echo "Your Chat ID is $YOUR_ID"
+	rm json
 else
 	echo "Token is not working, please check the @BotFather"
 fi
