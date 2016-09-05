@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo -n "Enter Your Bot Token: "
+read TOKEN
+
+RESPONSE=$(curl -s https://api.telegram.org/bot$TOKEN/getMe)
+
+if [ "${RESPONSE:6:4}" = "true" ]; then
+	echo "Your token is working Properly"
+	echo $RESPONSE
+else
+	echo "Token is not working, please check the @BotFather"
+fi

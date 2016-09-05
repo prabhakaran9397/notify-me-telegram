@@ -1,7 +1,7 @@
 #!/bin/bash
 
-TOKEN="240727579:AAFe1iasymRVKO7E8LYwsaE6vw86r-J4_ZE"
-YOUR_ID="48467332"
+TOKEN="XXXXXXXX"
+YOUR_ID="YYYYYYYY"
 
 if [ "$1" != "" ]; then
 	MESSAGE=$1
