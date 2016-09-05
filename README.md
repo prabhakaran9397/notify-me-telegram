@@ -15,3 +15,17 @@ Hello, this will allow you to send messages to your Telegram account from your b
    Use this token to access the HTTP API:
    123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11
    ``` 
+   
+6) Now, we need to find your chat ID
+
+   $ `./TestAndGetMyChatId`
+   ```
+   Enter Your Bot Token: 123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11
+   Your token is working Properly
+   {"ok":true,"result":{"id":123456789,"first_name":"Notifications","username":"botbotbot"}}
+   Now, send any message from your Telegram account to your bot
+   Send within 10 seconds
+   Your Chat ID is 987654321
+   A sample message is triggered! Check your Telegram
+   ```
+   
