@@ -1,0 +1,13 @@
+#!/bin/bash
+
+TOKEN="240727579:AAFe1iasymRVKO7E8LYwsaE6vw86r-J4_ZE"
+YOUR_ID="48467332"
+
+if [ "$1" != "" ]; then
+	MESSAGE=$1
+else
+	MESSAGE="Test"
+fi
+
+curl -s --data "chat_id=$YOUR_ID&text=$MESSAGE" https://api.telegram.org/bot$TOKEN/sendMessage > /dev/null
+
