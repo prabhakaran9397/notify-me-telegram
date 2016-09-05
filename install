@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Hi, Welcome to Notify!"
+echo "Please, Enter working Token and working Chat ID"
+echo -n "Enter Your Bot Token: "
+read TOKEN
+echo -n "Enter Your Chat ID: "
+read YOUR_ID
+cp source notify
+sed -i "0,/XXXXXX/s/XXXXXX/$TOKEN/" notify
+sed -i "0,/YYYYYY/s/YYYYYY/$YOUR_ID/" notify
+echo "Successfully Installed"
+echo "*If nofify is not working, type sudo make update*"
+echo "*To change the Chat ID or Token, type sudo make update*"
