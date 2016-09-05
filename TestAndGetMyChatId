@@ -1,6 +1,6 @@
 #!/bin/bash
 
-DELAY=0
+DELAY=10
 
 echo -n "Enter Your Bot Token: "
 read TOKEN
