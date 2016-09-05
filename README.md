@@ -66,3 +66,5 @@ $ `sudo make uninstall`
 ## Using Notify Me
 
 $ `notify "Hello, What's up?"`
+
+![Screenshot](./assets/notify.png "Screenshot 1")
