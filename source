@@ -1,0 +1,15 @@
+#!/bin/bash
+
+#Paste the working token here
+TOKEN="XXXXXX"
+#Paste the working Chat ID here
+YOUR_ID="YYYYYY"
+
+if [ "$1" != "" ]; then
+	MESSAGE=$1
+else
+	MESSAGE="Test"
+fi
+
+curl -s --data "chat_id=$YOUR_ID&text=$MESSAGE" https://api.telegram.org/bot$TOKEN/sendMessage > /dev/null
+
