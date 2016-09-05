@@ -29,3 +29,40 @@ Hello, this will allow you to send messages to your Telegram account from your b
    A sample message is triggered! Check your Telegram
    ```
    
+After getting the working <b>token</b> and working <b>chat ID</b> install it.
+
+## Installing
+
+To download this repository, you may either clone via git:
+
+$ `cd ~`
+
+$ `git clone https://github.com/prabhakaran9397/notify-me-telegram`
+
+or download a source code: [notify-me-telegram](https://github.com/prabhakaran9397/notify-me-telegram/archive/master.zip).
+
+$ `cd ~/notify-me-telegram`
+
+$ `sudo make install`
+
+This is a one time installation
+
+`Enter Your Bot Token: 123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11`
+
+`Enter Your Chat ID: 987654321`
+
+## Updating
+
+$ `cd ~/notify-me-telegram`
+
+$ `sudo make update`
+
+## Uninstalling
+
+$ `cd ~/notify-me-telegram`
+
+$ `sudo make uninstall`
+
+## Using Notify Me
+
+$ `notify "Hello, What's up?"`
