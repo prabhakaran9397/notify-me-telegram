@@ -1,9 +1,9 @@
 #!/bin/bash
 
 #Paste the working token here
-TOKEN="240727579:AAFe1iasymRVKO7E8LYwsaE6vw86r-J4_ZE"
+TOKEN="XXXXXXXX"
 #Paste the working Chat ID here
-YOUR_ID="48467332"
+YOUR_ID="YYYYYYYY"
 
 if [ "$1" != "" ]; then
 	MESSAGE=$1
