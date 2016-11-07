@@ -5,7 +5,7 @@ DELAY=10
 echo -n "Enter Your Bot Token: "
 read TOKEN
 
-RESPONSE=$(curl -s https://api.telegram.org/bot$TOKEN/getMe)
+RESPONSE=$(curl -4 -s https://api.telegram.org/bot$TOKEN/getMe)
 
 if [ "${RESPONSE:6:4}" = "true" ]; then
 	echo "Your token is working Properly"
@@ -18,7 +18,7 @@ if [ "${RESPONSE:6:4}" = "true" ]; then
 	echo -e "Your Chat ID is \033[91m$YOUR_ID\033[00m"
 	rm json
 	MESSAGE="Hello, Welcome to Notify!"
-	curl -s --data "chat_id=$YOUR_ID&text=$MESSAGE" https://api.telegram.org/bot$TOKEN/sendMessage > /dev/null
+	curl -4 -s --data "chat_id=$YOUR_ID&text=$MESSAGE" https://api.telegram.org/bot$TOKEN/sendMessage > /dev/null
 	echo "A sample message is triggered! Check your Telegram"
 else
 	echo "Token is not working, please check the @BotFather"

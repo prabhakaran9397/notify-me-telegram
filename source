@@ -11,5 +11,5 @@ else
 	MESSAGE="Test"
 fi
 
-curl -s --data "chat_id=$YOUR_ID&text=$MESSAGE" https://api.telegram.org/bot$TOKEN/sendMessage > /dev/null
+curl -4 -s --data "chat_id=$YOUR_ID&text=$MESSAGE" https://api.telegram.org/bot$TOKEN/sendMessage > /dev/null
 
