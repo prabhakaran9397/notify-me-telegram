@@ -8,7 +8,7 @@ YOUR_ID="YYYYYY"
 if [ "$1" != "" ]; then
 	MESSAGE=$1
 else
-	MESSAGE="Test"
+	read MESSAGE
 fi
 
 curl -4 -s --data "chat_id=$YOUR_ID&text=$MESSAGE" https://api.telegram.org/bot$TOKEN/sendMessage > /dev/null
